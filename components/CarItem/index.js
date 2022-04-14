@@ -1,11 +1,11 @@
 import { View, Text, ImageBackground } from 'react-native'
 import React from 'react'
 import styles from './styles';
-import StyledButton from '../CarItem/StyledButton/index';
+import StyledButton from '../StyledButton/index';
 
 export default function CarItem(props) {
 
-  const { name, tagline, taglineCTA, image } = props;
+  const { name, tagline, taglineCTA, image } = props.car;
 
   return (
     <View style={styles.carContainer}>
