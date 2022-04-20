@@ -1,27 +1,27 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, ImageBackground } from "react-native";
-import CarsList from "./components/CarsList";
-import Header from "./components/Header";
+// In App.js in a new project
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Base from './Base';
+import { NativeBaseProvider } from 'native-base';
 
-export default function App() {
-    return (    
-      <View style = {styles.container}>
-        <Header/>  
-        <CarsList/>   
-        
-        </View>
-    );
+
+const Stack = createNativeStackNavigator();
+
+function App() {
+  return (
+    <NativeBaseProvider>
+    <NavigationContainer >
+      <Stack.Navigator 
+        screenOptions={{
+          headerShown: false
+        }}
+      >
+        <Stack.Screen name="Home" component={Base} />
+      </Stack.Navigator>
+    </NavigationContainer>
+    </NativeBaseProvider>
+  );
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-
-    
-
-});
-
+export default App;
