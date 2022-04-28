@@ -32,7 +32,6 @@ export default function Base() {
             </View>
            <View style={styles.menuListContainer} >
            <FlatList 
-           
             data={menu}
             renderItem={({item}) => (<View  ><Text style={styles.nameContainer}>{item.name}</Text></View>)}
             keyExtractor={item => item.id}

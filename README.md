@@ -1,2 +1,2 @@
 # Tesla-App
-Tesla App using React Native
+Tesla App, React Native Using Expo 
